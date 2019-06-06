@@ -1,1 +1,27 @@
 // Navigation Styles here
+
+nav {
+    a {
+        font-size: 2rem;
+        color: #000;
+        text-decoration: none;
+        margin: 0 2rem;
+        padding: 1rem 1.5rem;
+
+        @media @phone {
+            font-size: 1.2rem;
+            margin: 0 .5rem;
+            padding: .5rem .8rem;
+        }
+
+        &:hover {
+            background-color: @eastern-blue;
+            color: white;
+            .transition();
+        }
+    }
+
+    @media @phone {
+        margin-top: 2rem;
+    }
+}
