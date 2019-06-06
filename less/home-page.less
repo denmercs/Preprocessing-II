@@ -1,4 +1,38 @@
+header {
+  border-bottom: 2px dashed @navigation-border;
+
+  .header-items {
+    .center(space-between, center);
+    padding: 4rem 0;
+  
+    @media @phone {
+      .flex(column);
+      padding: 2rem 0;
+    }
+  }
+}
+
+
+.intro {
+  .fun-bus {
+    background: url('../img/fun-bus.jpg');
+    width: 100%;
+    height: 30rem;    
+
+    @media @phone {
+      height: 15rem;
+      background-size: cover;
+    }
+  }
+  
+  h2 {
+    margin-top: 2rem;
+  }
+}
+
 .home {
+  border-top: 2px dashed @navigation-border;
+  margin-top: 2rem;
 
   .content-section {
     margin: 30px 0;
@@ -6,16 +40,27 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+   @media @phone {
+     .flex(column);
+   }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @phone {
+        width: 100%;
+        padding-right: 0;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @phone {
+        width: 100%;
+      }
 
       img {
         border-radius: 10px;
@@ -26,15 +71,27 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    
+    @media @phone {
+      .flex(column);
+    }
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @phone {
+        order: 1;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @phone {
+        order: 2;
+      }
     }
   }
 
@@ -53,9 +110,67 @@
     display: flex;
     justify-content: space-between;
 
+    @media @phone {
+      .flex(column);
+      .center(center, center);
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @phone {
+        width: 60%;
+      }
+    }
+    .btn {
+      .custom-btn();
+
+      &:hover {
+        background-color: @sandy-beach;
+        color: @eastern-blue;
+
+        .transition();
+      }
+
+      @media @phone {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.4rem;
+      }
+    }
+  }
+  .contact {
+    .flex(column);
+    .center(center, center);
+    padding: 2rem 0;
+
+    h2 {
+      margin-top: 2rem;
+    }
+
+    label {
+      font-size: 2rem;
+      padding: 2rem 0;
+    }
+
+    input {
+      width: 80%;
+      padding: 2rem;
+    }
+
+    .btn {
+      font-size: 2rem;
+      margin-top: 2rem;
+      width: 80%;
+      .custom-btn();
+
+      &:hover {
+        background-color: @sandy-beach;
+        color: @eastern-blue;
+
+        .transition();
+      }
     }
   }
 }// home

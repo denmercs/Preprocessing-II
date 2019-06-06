@@ -1,1 +1,35 @@
 // Mixins in here
+
+.center(@justify: center, @align: center) {
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.flex(@direction: row) {
+    display: flex;
+    flex-direction: @direction;
+}
+
+.border-bottom(@width: 2px, @style: dashed, @color: grey) {
+    border-bottom-style: @style;
+    border-color: @color;
+    border-width: @width;
+}
+
+.custom-btn {
+    color: white;
+    background-color: #00807F;
+    font-size: 2rem;
+    text-align: center;
+    width: 80%;
+    border-radius: 2rem;
+    padding: 1.5rem;
+}
+
+.transition(@color: @eastern-blue, @duration: 0.5s, @timing: ease-in, @delay: 0.3s) {
+    transition-property: @color;
+      transition-duration: @duration;
+      transition-timing-function: @timing;
+      transition-delay: @delay;
+    }
